@@ -43,9 +43,9 @@ public class Main extends Application {
 
         ObservableList groups = root.getChildren();
 
-        groups.add(text);
+        //groups.add(text); //Text not working
         groups.add(line);
-        
+
 
         Scene primaryScene = new Scene(root, dimensions[0],dimensions[1]);
         primaryScene.setFill(Color.ALICEBLUE);
