@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
 import javafx.scene.text.Font;
+import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
 
@@ -27,6 +28,7 @@ public class Main extends Application {
         text.setX(x);
         text.setY(y);
         text.setText(message);
+        System.out.println(message);
         return text;
     }
 
@@ -36,15 +38,17 @@ public class Main extends Application {
         Line line = makeLine(0,100,dimensions[0],100);
         Text text = makeText("This is my new Java Application!", dimensions[0]/2, 70);
 
-        Group root = new Group();//FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Group root = new Group();
+        //FXMLLoader.load(getClass().getResource("sample.fxml"));
 
         ObservableList groups = root.getChildren();
 
         groups.add(text);
         groups.add(line);
+        
 
         Scene primaryScene = new Scene(root, dimensions[0],dimensions[1]);
-        primaryScene.setFill(Color.AQUAMARINE);
+        primaryScene.setFill(Color.ALICEBLUE);
         primaryStage.setTitle("Welcome");
         primaryStage.setScene(primaryScene);
         primaryStage.show();
